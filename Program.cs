@@ -86,18 +86,9 @@ namespace ArchsMultiTool
 
         static async Task Main(string[] args)
         {
-            string webhookUrl = "https://discord.com/api/webhooks/1303344288595185756/ySw3LBdA-mRNqC8dfvAOnMr7j7EpzOnL6aKl9iQmSR634Q9Qmi4Y3msQFhuttpbiGc-o";
 
             while (true)
             {
-                string messageContent = "User has logged onto the MultiTool";
-                string json2 = $"{{\"content\":\"{messageContent}\"}}";
-
-                using (HttpClient client = new HttpClient())
-                using (var content = new StringContent(json2, Encoding.UTF8, "application/json"))
-                {
-                    await client.PostAsync(webhookUrl, content);
-                }
 
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.White;
